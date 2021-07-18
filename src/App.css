@@ -13,9 +13,6 @@
   font-family: 'Anton', Arial, sans-serif;
   font-size: 20px;
   background-color: #ced0d3;
-  /* background-image: url('./assets/1.jpg'); */
-
-
 }
 
 .header {
@@ -159,7 +156,7 @@
 .accordion-title,
 .accordion-content {
   padding: 1rem;
-  margin: 0.3rem;
+  margin: 0.2rem;
 
 }
 
@@ -174,11 +171,6 @@
   background-position: cover;
 }
 
-/* .accordion-content div{
-  border-radius: 10px;
-    border-width: 0px;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
-} */
 .first-line{
   display: flex;
   flex-direction: row;
@@ -212,8 +204,7 @@
   padding-top: 2%;
   padding-bottom: 2%;
   border-top: 0.5px solid black;
-  
-  
+ 
 }
 .second-line *{
   padding: 2%;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Accordion from './Accordion';
-import Card from './card';
+// import Card from './card';
 
 class RenderWeeklyWeather extends React.Component {
     constructor(props){
@@ -24,7 +24,8 @@ class RenderWeeklyWeather extends React.Component {
                                 <Accordion item = {a} index ={index} inDegrees={this.state.inDegrees}>
 
                                 </Accordion> 
-
+                                
+                                // card component to display in monthly data in different style
                                 // <Card item = {a} index ={index}>
 
                                 // </Card> 
