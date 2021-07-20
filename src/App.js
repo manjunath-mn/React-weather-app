@@ -1,10 +1,10 @@
 import './App.css';
-import SubmitComponent from './components/SubmitComponent';
+import Weather from './components/weather';
 
 function App() {
   return (
     <div >
-      <SubmitComponent />
+      <Weather />
     </div>
   );
 }

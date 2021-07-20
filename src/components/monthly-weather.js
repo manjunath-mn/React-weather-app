@@ -1,8 +1,8 @@
 import React from 'react';
-import Accordion from './Accordion';
+import Accordion from './accordion';
 // import Card from './card';
 
-class RenderWeeklyWeather extends React.Component {
+class WeeklyWeather extends React.Component {
     constructor(props){
         super(props);
         this.state ={
@@ -10,25 +10,24 @@ class RenderWeeklyWeather extends React.Component {
         }
     
     }
-    
+    updateState = () => {
+        this.setState({inDegrees : !this.state.inDegrees})
+    }
     render(){
-      
+        const {city,list} = this.props.value;
+
         return (
                 <div className="panel">
-                    {(typeof this.props.value.city != "undefined") ? (
+                    {(typeof city != "undefined") ? (
                         <div className="accordion">   
                             <div className="change-value">
-                                <button  onClick={() => this.setState({inDegrees : !this.state.inDegrees})}>{this.state.inDegrees ?"Click for Fahrenheit conversion":"Click for Degrees conversion"}</button>
+                                <button  onClick={this.updateState}>{this.state.inDegrees ?"Click for Fahrenheit conversion":"Click for Degrees conversion"}</button>
                             </div>
-                            {this.props.value.list.map((a,index) => (
+                            {list.map((a,index) => (
                                 <Accordion item = {a} index ={index} inDegrees={this.state.inDegrees}>
 
                                 </Accordion> 
                                 
-                                // card component to display in monthly data in different style
-                                // <Card item = {a} index ={index}>
-
-                                // </Card> 
                             ))}
                         </div>) : ("")  
                     }
@@ -43,4 +42,4 @@ class RenderWeeklyWeather extends React.Component {
 
 
 
-export default RenderWeeklyWeather;
+export default WeeklyWeather;
